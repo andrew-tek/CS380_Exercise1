@@ -9,7 +9,6 @@ public final class EchoClient {
 
     public static void main(String[] args) throws Exception {
         try (Socket socket = new Socket("localhost", 22222)) {
-        	System.out.println(socket);
             InputStream is = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(is, "UTF-8");
             BufferedReader br = new BufferedReader(isr);
